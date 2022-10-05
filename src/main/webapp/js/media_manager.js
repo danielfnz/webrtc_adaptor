@@ -265,9 +265,11 @@ export class MediaManager
 					}
 				}
 				else{
-					alert("No input device found, publish is not possible");
+					//alert("No input device found, publish is not possible");
+					this.openStream({video : false, audio : false}, this.mode)
 				}
 			}
+
 		}).catch(err => {
 			console.error("Cannot get devices -> error name: " + err.name + ": " + err.message);
 		});
@@ -535,6 +537,7 @@ export class MediaManager
 	{
 		this.mediaConstraints = mediaConstraints;
 		var audioConstraint = false;
+		
 		if (typeof mediaConstraints.audio != "undefined" && mediaConstraints.audio != false) {
 			audioConstraint = mediaConstraints.audio;
 		}

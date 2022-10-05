@@ -205,7 +205,7 @@ video {
 			$("#streamId").val(id);
 		} 
 		else {
-			$("#streamId").val("stream1");
+			$("#streamId").val("392053842763409627637663");
 		}
 	  }
     }
@@ -236,7 +236,7 @@ video {
 	
 	document.getElementById("streamId").defaultValue = "Goofy"
 	var streamIdBox = document.getElementById("streamId");
-	streamIdBox.value = "stream1";
+	streamIdBox.value = "392053842763409627637663";
 
 	var toggleNoiseSuppression = document.getElementById("noiseSuppression");
 	toggleNoiseSuppression.addEventListener("click", changeAudioConstraints, false);
@@ -529,16 +529,16 @@ video {
 	};
 	
 	var mediaConstraints = {
-		video : true,
-		audio: true,
+		video : 'screen',
+		audio: false,
 	};
 
 	var appName = location.pathname.substring(0, location.pathname.lastIndexOf("/")+1);
-	var path =  location.hostname + ":" + location.port + appName + "websocket?rtmpForward=" + rtmpForward;
-	var websocketURL =  "ws://" + path;
+	var path = "";
+	var websocketURL =  "wss://antmedia.tacweb-uat.com:5443/TacApp/websocket" + path;
 	
 	if (location.protocol.startsWith("https")) {
-		websocketURL = "wss://" + path;
+		websocketURL = "wss://antmedia.tacweb-uat.com:5443/TacApp/websocket" + path;
 	}
 
 	var	webRTCAdaptor = null;
@@ -822,9 +822,7 @@ video {
 						else if (error.indexOf("NotAllowedError") != -1 || error.indexOf("PermissionDeniedError") != -1) {
 							errorMessage = "You are not allowed to access camera and mic.";
 						}
-						else if (error.indexOf("TypeError") != -1) {
-							errorMessage = "Video/Audio is required";
-						}
+				
 						else if (error.indexOf("getUserMediaIsNotAllowed") != -1){
 							errorMessage = "You are not allowed to reach devices from an insecure origin, please enable ssl";
 						}
