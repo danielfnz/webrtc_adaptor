@@ -1,0 +1,19 @@
+{
+  "name": "webrtc_adaptor",
+  "version": "1.0.0",
+  "description": "WebSocket interface in publishing and playing WebRTC streams on Ant Media Server using Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielfnz/webrtc_adaptor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielfnz/webrtc_adaptor/issues"
+  },
+  "homepage": "https://github.com/danielfnz/webrtc_adaptor#readme"
+}
