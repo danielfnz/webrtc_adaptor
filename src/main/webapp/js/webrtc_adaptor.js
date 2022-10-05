@@ -249,8 +249,8 @@ export class WebRTCAdaptor
  		{
 			this.mediaManager.initLocalStream().then(() => 
 			{
-				var videoEnabled = this.mediaManager.localStream.getVideoTracks().length > 0 ? true : false;
-				var audioEnabled = this.mediaManager.localStream.getAudioTracks().length > 0 ? true : false;
+				var videoEnabled = this.mediaManager.localStream && this.mediaManager.localStream.getVideoTracks().length > 0 ? true : false;
+				var audioEnabled = this.mediaManager.localStream && this.mediaManager.localStream.getAudioTracks().length > 0 ? true : false;
 				this.sendPublishCommand(streamId, token, subscriberId, subscriberCode, streamName, mainTrack, metaData, videoEnabled, audioEnabled)
 					
 			}).catch(error => {
@@ -259,8 +259,8 @@ export class WebRTCAdaptor
 		} 
 		else
 		{
-			var videoEnabled = this.mediaManager.localStream.getVideoTracks().length > 0 ? true : false;
-			var audioEnabled = this.mediaManager.localStream.getAudioTracks().length > 0 ? true : false;
+			var videoEnabled = this.mediaManager.localStream && this.mediaManager.localStream.getVideoTracks().length > 0 ? true : false;
+			var audioEnabled = this.mediaManager.localStream && this.mediaManager.localStream.getAudioTracks().length > 0 ? true : false;
 			this.sendPublishCommand(streamId, token, subscriberId, subscriberCode, streamName, mainTrack, metaData, videoEnabled, audioEnabled)
 	
 		}
