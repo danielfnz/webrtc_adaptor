@@ -266,7 +266,7 @@ export class MediaManager
 				}
 				else{
 					//alert("No input device found, publish is not possible");
-					this.openStream({video : false, audio : false}, this.mode)
+					//this.openStream({video : false, audio : false}, this.mode)
 				}
 			}
 
