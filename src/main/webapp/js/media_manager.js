@@ -478,17 +478,7 @@ export class MediaManager
 					this.callbackError("ScreenSharePermissionDenied");
 
 					// If error catched then redirect Default Stream Camera
-					if(this.localStream == null){
-						var mediaConstraints = {
-							video : true,
-							audio : true
-						};
-
-						this.openStream(mediaConstraints);
-					}
-					else{
-						this.switchVideoCameraCapture(streamId);
-					}
+				
 				}
 			});
 	}
