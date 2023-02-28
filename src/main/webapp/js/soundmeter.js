@@ -42,9 +42,9 @@ SoundMeter.prototype.connectToSource = function(stream, callback) {
     }
   } catch (e) {
     console.error(e);
-    if (typeof callback !== 'undefined') {
+/*     if (typeof callback !== 'undefined') {
       callback(e);
-    }
+    } */
   }
 };
 
