@@ -21,11 +21,5 @@
   "bugs": {
     "url": "https://github.com/danielfnz/webrtc_adaptor/issues"
   },
-  "homepage": "https://github.com/danielfnz/webrtc_adaptor#readme",
-  "dependencies": {
-    "@babel/cli": "^7.19.6"
-  },
-  "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.19.6"
-  }
+  "homepage": "https://github.com/danielfnz/webrtc_adaptor#readme"
 }
